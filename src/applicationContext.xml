@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- load the properties file: sport.properties -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+    
     <!-- Define your beans here -->
     <bean id="myFortune" class="java_1_spring_core.HappyFortuneService"></bean>
     
@@ -23,6 +26,9 @@
     <bean id="myCricketCoach"  class="java_1_spring_core.CricketCoach">
         <!-- property name it will be setter -->
         <property name="fortuneService" ref="myFortune"/>
+        
+        <property name="Email" value="${coach.email}"/>
+        <property name="Team" value="${coach.team}"/>
         
     </bean>
     
