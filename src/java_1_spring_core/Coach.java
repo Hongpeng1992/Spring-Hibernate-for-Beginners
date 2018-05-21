@@ -12,7 +12,8 @@ package java_1_spring_core;
 public interface Coach {
     
     public String getDailyWorkout();
-        
     
+    public String getDailyFortune();
+
     
 }
